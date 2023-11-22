@@ -1,4 +1,4 @@
-package com.example.testapp;
+package com.example.generalHospitalTemi;
 
 import static com.google.firebase.FirebaseApp.initializeApp;
 
@@ -6,7 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;

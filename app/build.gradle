@@ -3,11 +3,11 @@ plugins {
     id 'com.google.gms.google-services'
 }
 android {
-    namespace 'com.example.testapp'
+    namespace 'com.example.generalHospitalTemi'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.testapp"
+        applicationId "com.example.generalHospitalTemi"
         minSdk 23
         targetSdk 33
         versionCode 1
