@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "182482202949",
+    "firebase_url": "https://generalhospitaltemi-default-rtdb.firebaseio.com",
+    "project_id": "generalhospitaltemi",
+    "storage_bucket": "generalhospitaltemi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182482202949:android:52c039c0de0bb464124e2c",
+        "android_client_info": {
+          "package_name": "com.example.com.example.generalHospitalTemi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiTiuFw11BO3uwpnHUTISbLDJt16aMixg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
