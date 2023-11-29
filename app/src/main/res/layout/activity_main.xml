@@ -15,23 +15,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
-            android:width="150dp"
-            android:height="70dp"
+
+        <ImageView
             android:layout_margin="20dp"
             android:id="@+id/medical_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="의료용" />
+            android:src="@drawable/main_medical"
+            tools:ignore="SpeakableTextPresentCheck"/>
 
-        <Button
-            android:width="150dp"
-            android:height="70dp"
+        <ImageView
             android:layout_margin="20dp"
             android:id="@+id/patient_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="환자용" />
+            android:src="@drawable/main_patient"
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
 
