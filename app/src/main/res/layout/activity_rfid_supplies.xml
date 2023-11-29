@@ -7,19 +7,18 @@
     tools:context=".medical.RfidSuppliesActivity">
 
     <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/medical_information_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:letterSpacing="0"
+        android:fontFamily="@font/pretendardsemibold"
         android:text="RFID 카드 인식"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:textSize="45sp"
         android:textStyle="normal"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="90dp"
         />
 
     <LinearLayout
@@ -31,15 +30,16 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/medical_information_text"
-        app:layout_constraintVertical_bias="0.352">
+>
 
         <ImageView
             android:id="@+id/rfid_supplies_img"
-            android:layout_width="300dp"
-            android:layout_height="150dp"
+            android:layout_width="500dp"
+            android:layout_height="350dp"
             android:src="@drawable/rfid_supplies" />
 
         <LinearLayout
+            android:layout_marginHorizontal="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -48,34 +48,35 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="@font/pretendardsemibold"
                 android:letterSpacing="0"
                 android:text="물품을 전달받으려면"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="40sp"
                 android:textStyle="normal"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="@font/pretendardsemibold"
                 android:letterSpacing="0"
                 android:text="앞쪽에 카드를 대주세요."
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="40sp"
                 android:textStyle="normal"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="@font/pretendardsemibold"
                 android:letterSpacing="0"
                 android:text="RFID 카드를 인식 중 입니다."
-                android:textColor="#000000"
-                android:textSize="10sp"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp"
                 android:textStyle="normal"></TextView>
 
         </LinearLayout>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
