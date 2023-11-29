@@ -5,12 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.generalHospitalTemi.R;
+import com.example.generalHospitalTemi.databinding.ActivityMainBinding;
+import com.example.generalHospitalTemi.databinding.ActivityMedicalMainBinding;
 
 public class MedicalMainActivity extends AppCompatActivity {
 
+    private ActivityMedicalMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medical_main);
+        binding = ActivityMedicalMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
     }
 }
