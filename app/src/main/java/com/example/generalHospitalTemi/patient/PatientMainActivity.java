@@ -11,6 +11,7 @@ import com.example.generalHospitalTemi.databinding.ActivityMedicalMainBinding;
 import com.example.generalHospitalTemi.databinding.ActivityPatientMainBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.DatabaseReference;
 
@@ -23,6 +24,7 @@ public class PatientMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityPatientMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        databaseReference = FirebaseDatabase.getInstance().getReference();
         databaseReference.child("rfid").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
