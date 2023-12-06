@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".TestActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -16,30 +16,26 @@
         app:layout_constraintStart_toStartOf="parent">
 
 
-        <ImageView
-            android:layout_margin="20dp"
-            android:id="@+id/medical_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/main_medical"
-            tools:ignore="SpeakableTextPresentCheck"/>
         <Button
-            android:id="@+id/go_to_test_btn"
+            android:id="@+id/go_to_homebase"
             android:layout_gravity="center"
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:text="테스트 바로가기"
+            android:text="홈베이스"/>
+        <Button
+            android:id="@+id/go_to_1"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:text="위치1"
             />
-        <ImageView
-            android:layout_margin="20dp"
-            android:id="@+id/patient_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/main_patient"
-            tools:ignore="SpeakableTextPresentCheck" />
-
+        <Button
+            android:id="@+id/go_to_2"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:text="위치3"/>
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
