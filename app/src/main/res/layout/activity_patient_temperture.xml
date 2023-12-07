@@ -1,0 +1,71 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".patient.PatientMainActivity"
+    tools:ignore="MissingClass">
+
+    <ImageView
+        android:id="@+id/temperture_frame"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/temperture_frame" />
+
+    <ImageView
+        android:id="@+id/temperture_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-10dp"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:src="@drawable/temperture_bar" />
+
+    <TextView
+        android:id="@+id/temperture_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="체온 측정 전"
+        android:textColor="@color/black"
+        android:textSize="38sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/print_temperture_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temperture_bar"
+        android:layout_centerHorizontal="true"
+        android:text="화면에서 거리를 두면\n체온 측정이 시작됩니다"
+        android:textAlignment="center"
+        android:textColor="#6A6A6A"
+        android:textSize="32sp" />
+
+    <LinearLayout
+        android:id="@+id/temperturebottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/temperture_prev_btn"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@drawable/register1_prev_btn" />
+
+        <ImageView
+            android:id="@+id/temperture_prev_text"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:src="@drawable/register1_prev" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

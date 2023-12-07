@@ -41,7 +41,7 @@ public class TestActivity extends AppCompatActivity implements
             @Override
             public void onClick(View view) {
 
-                roboTemiListeners.goTo("홈베이스");
+                roboTemiListeners.goTo("home base");
             }
         });
 
