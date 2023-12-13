@@ -37,6 +37,9 @@
         <activity
             android:name=".medical.MedicalMainActivity"
             android:exported="true" />
+        <activity
+            android:name=".patient.PatientTempertureActivity"
+            android:exported="true" />
 
         <meta-data
             android:name="android.app.lib_name"
