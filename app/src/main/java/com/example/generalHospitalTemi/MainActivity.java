@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import com.example.generalHospitalTemi.databinding.ActivityMainBinding;
 import com.example.generalHospitalTemi.medical.MedicalMainActivity;
+import com.example.generalHospitalTemi.medical.emergency.CodeBlueActivity;
+import com.example.generalHospitalTemi.medical.emergency.EmergencyActivity;
 import com.example.generalHospitalTemi.patient.PatientMainActivity;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         // binding
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 
         // go to medical main
         binding.medicalButton.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +65,26 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
+        databaseReference.child("codeblue").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if(snapshot.getValue().toString() == "true"){
+                    Intent intent = new Intent(MainActivity.this, CodeBlueActivity.class);
+                    startActivity(intent);
+                }
+                else{
+
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.w("tag", "Failed to read RFID value.", error.toException());
+            }
+        });
+
 
     }
 }
