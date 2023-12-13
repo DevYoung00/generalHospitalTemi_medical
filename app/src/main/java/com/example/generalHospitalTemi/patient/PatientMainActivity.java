@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.example.generalHospitalTemi.databinding.ActivityPatientMainBinding;
 import com.example.generalHospitalTemi.databinding.ActivityPatientTempertureBinding;
+import com.example.generalHospitalTemi.patient.call.DoctorCallActivity;
 import com.google.firebase.database.DatabaseReference;
 
 public class PatientMainActivity extends AppCompatActivity {
@@ -26,6 +27,15 @@ public class PatientMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(PatientMainActivity.this, PatientTempertureActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 의료진 호출
+        binding.callImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PatientMainActivity.this, DoctorCallActivity.class);
                 startActivity(intent);
             }
         });

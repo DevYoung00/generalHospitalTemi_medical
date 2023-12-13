@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerArray">
+        <item> 호출 이유를 선택해주세요. </item>
+
+        <item> 고열 및 외상 </item>
+
+        <item> 급성 의식장애, 호흡부전 등 </item>
+
+        <item> 응급 환자 발생 </item>
+
+        <item> 기타 서비스 </item>
+
+    </string-array>
+
+</resources>

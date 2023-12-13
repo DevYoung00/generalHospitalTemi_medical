@@ -14,6 +14,12 @@
         android:theme="@style/Theme.TestApp"
         tools:targetApi="31">
         <activity
+            android:name=".patient.call.DoctorComeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".patient.call.DoctorCallActivity"
+            android:exported="true" />
+        <activity
             android:name=".TestActivity"
             android:exported="true" />
         <activity

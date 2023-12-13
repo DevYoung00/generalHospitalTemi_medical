@@ -4,26 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".patient.register.RegisterActivity1">
+    tools:context=".patient.call.DoctorCallActivity">
     <LinearLayout
         android:gravity="center"
-        android:id="@+id/register1_step_layout"
+        android:id="@+id/doctor_call_layout"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp"
- >
-      <ImageView
-          android:layout_width="600dp"
-          android:layout_height="wrap_content"
-          android:src="@drawable/register_step1"
-          />
+        android:layout_marginTop="50dp"
+        >
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:fontFamily="@font/pretendardsemibold"
+         android:textSize="40sp"
+         android:textColor="@color/black"
+         android:text="의료진 호출"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendardsemibold"
+            android:textSize="30sp"
+            android:text="호출 이유 선택 후 다음을 누르면 호출이 시작됩니다."/>
+
 
     </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="200dp"
         android:id="@+id/register1_card_tag_layout"
         android:gravity="center"
         android:layout_width="wrap_content"
@@ -31,17 +41,17 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register1_step_layout">
+        app:layout_constraintTop_toBottomOf="@id/doctor_call_layout">
 
-        <ImageView
-            android:id="@+id/register1_card_tag"
-            android:layout_width="800dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/register_card"/>
+
+        <Spinner
+            android:background="@drawable/background_spinner"
+            android:id="@+id/doctor_call_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:gravity="center"
@@ -66,8 +76,14 @@
 
             android:src="@drawable/register1_prev"/>
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/doctor_call__next_btn"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
 
+            android:src="@drawable/next_btn"/>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
