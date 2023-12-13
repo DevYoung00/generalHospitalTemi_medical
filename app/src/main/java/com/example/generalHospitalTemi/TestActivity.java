@@ -31,6 +31,7 @@ public class TestActivity extends AppCompatActivity implements
         binding = ActivityTestBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         roboTemiListeners = new RoboTemiListeners();
+
             roboTemiListeners.getRobot().addAsrListener(this);//robot 객체는 현재 private 처리되어있기 때문에 참조하기 위해서 get을 사용하였다.
             //  ^---- 여기가 Robot 객체 ----^                    << 여긴 robot.addAsrListener(this);와 동일하다.
             roboTemiListeners.getRobot().addTtsListener(this);
