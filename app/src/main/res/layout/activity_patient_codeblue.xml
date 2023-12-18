@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".patient.call.DoctorComeActivity">
+    tools:context=".medical.emergency.CodeBlueActivity">
     <LinearLayout
         android:gravity="center"
-        android:id="@+id/doctor_call_layout"
+        android:id="@+id/emergency_layout"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,38 +22,33 @@
             android:fontFamily="@font/pretendardsemibold"
             android:textSize="40sp"
             android:textColor="@color/black"
-            android:text="의료진 호출"/>
+            android:text="응급 상황 발생"/>
         <TextView
+            android:id="@+id/emergency_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pretendardsemibold"
             android:textSize="30sp"
-            android:text="호출 이유 선택 후 다음을 누르면 호출이 시작됩니다."/>
+            android:textColor="#E91E1E"
+            android:text="현재 코드 블루가 발생하였습니다."/>
 
 
     </LinearLayout>
     <LinearLayout
         android:layout_marginTop="150dp"
-        android:id="@+id/register1_card_tag_layout"
+        android:id="@+id/emergency_layout_tag_layout"
         android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/doctor_call_layout">
+        app:layout_constraintTop_toBottomOf="@id/emergency_layout">
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="500dp"
             android:layout_height="wrap_content"
-            android:id="@+id/doctor_loading_pic"
-            android:src="@drawable/loading_pic"/>
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/pretendardmedium"
-            android:textSize="30sp"
-            android:text="의료진은 도착 시 사원증을 인식해주세요."/>
+            android:id="@+id/emergency_send_pic"
+            android:src="@drawable/codeblue_pic"/>
 
     </LinearLayout>
 
@@ -67,25 +62,14 @@
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent" >
 
-        <ImageView
 
-            android:id="@+id/register1_prev_btn"
-            android:layout_width="80dp"
-            android:layout_height="100dp"
-            android:src="@drawable/register1_prev_btn"/>
         <ImageView
             android:id="@+id/register1_prev_text"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="100dp"
 
-            android:src="@drawable/register1_prev"/>
+            android:src="@drawable/emergency_patient"/>
 
-        <ImageView
-            android:id="@+id/doctor_call__next_btn"
-            android:layout_width="80dp"
-            android:layout_height="100dp"
-
-            android:src="@drawable/next_btn"/>
 
     </LinearLayout>
 

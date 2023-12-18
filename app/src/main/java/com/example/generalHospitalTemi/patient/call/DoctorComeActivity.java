@@ -8,18 +8,18 @@ import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
 import com.example.generalHospitalTemi.R;
-import com.example.generalHospitalTemi.databinding.ActivityDoctorComeBinding;
+import com.example.generalHospitalTemi.databinding.ActivityPatientDoctorcomeBinding;
 import com.example.generalHospitalTemi.databinding.ActivityMedicalMainBinding;
 
 public class DoctorComeActivity extends AppCompatActivity {
 
-   private ActivityDoctorComeBinding binding;
+   private ActivityPatientDoctorcomeBinding binding;
    ImageView imageView;
    int mDegree = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityDoctorComeBinding.inflate(getLayoutInflater());
+        binding = ActivityPatientDoctorcomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         imageView = binding.doctorLoadingPic;

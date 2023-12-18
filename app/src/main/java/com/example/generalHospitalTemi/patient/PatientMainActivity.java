@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.generalHospitalTemi.databinding.ActivityPatientMainBinding;
-import com.example.generalHospitalTemi.databinding.ActivityPatientTempertureBinding;
 import com.example.generalHospitalTemi.patient.call.DoctorCallActivity;
 import com.google.firebase.database.DatabaseReference;
 

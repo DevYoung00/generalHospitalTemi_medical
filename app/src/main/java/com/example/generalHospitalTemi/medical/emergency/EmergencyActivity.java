@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.generalHospitalTemi.R;
-import com.example.generalHospitalTemi.databinding.ActivityEmergencyBinding;
+import com.example.generalHospitalTemi.databinding.ActivityMedicalEmergencyBinding;
 import com.example.generalHospitalTemi.databinding.ActivityMedicalMainBinding;
 import com.example.generalHospitalTemi.patient.PatientMainActivity;
 import com.example.generalHospitalTemi.patient.PatientTempertureActivity;
@@ -17,13 +17,13 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class EmergencyActivity extends AppCompatActivity {
 
-    private ActivityEmergencyBinding binding;
+    private ActivityMedicalEmergencyBinding binding;
     private DatabaseReference databaseReference;
     private int codeblue = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityEmergencyBinding.inflate(getLayoutInflater());
+        binding = ActivityMedicalEmergencyBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         databaseReference = FirebaseDatabase.getInstance().getReference();
         binding.emergencySendPic.setOnClickListener(new View.OnClickListener() {

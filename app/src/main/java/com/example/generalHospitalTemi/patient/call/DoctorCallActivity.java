@@ -1,23 +1,16 @@
 package com.example.generalHospitalTemi.patient.call;
 
-import static java.security.AccessController.getContext;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.generalHospitalTemi.R;
-import com.example.generalHospitalTemi.TestActivity;
-import com.example.generalHospitalTemi.databinding.ActivityDoctorCallBinding;
-import com.example.generalHospitalTemi.databinding.ActivityMedicalMainBinding;
-import com.example.generalHospitalTemi.patient.PatientMainActivity;
-import com.example.generalHospitalTemi.patient.PatientTempertureActivity;
+import com.example.generalHospitalTemi.databinding.ActivityPatientDoctorcallBinding;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,7 +18,7 @@ import java.util.List;
 
 public class DoctorCallActivity extends AppCompatActivity {
 
-    private ActivityDoctorCallBinding binding;
+    private ActivityPatientDoctorcallBinding binding;
     private List<String> list = new ArrayList<>();
     private Spinner spinner;
     private CustomSpinnerAdapter adapter;
@@ -34,7 +27,7 @@ public class DoctorCallActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityDoctorCallBinding.inflate(getLayoutInflater());
+        binding = ActivityPatientDoctorcallBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         //Spinner 객체
