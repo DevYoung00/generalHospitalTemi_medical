@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:gravity="center"
-        android:id="@+id/register3_step_layout"
+        android:id="@+id/register5_step_layout"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,23 +18,36 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="20dp"
         >
+
         <ImageView
             android:layout_width="600dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/register3_step"
+            android:src="@drawable/register5_step"
             />
+
+        <TextView
+            android:id="@+id/register5_register_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/pretendardmedium"
+            android:layout_above="@id/register5_bar_layout"
+            android:text="홍진수님의 대기번호는"
+            android:textColor="#6A6A6A"
+            android:textSize="35sp" />
 
     </LinearLayout>
 
 
+
     <RelativeLayout
-        android:layout_marginTop="50dp"
-        android:id="@+id/register3_temperture_bar_layout"
+        android:id="@+id/register5_bar_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register3_step_layout">
+        app:layout_constraintTop_toBottomOf="@id/register5_step_layout">
 
         <ImageView
             android:id="@+id/register3_temperture_bar"
@@ -46,84 +59,68 @@
             android:scaleY="0.8"
             android:src="@drawable/temperture_bar" />
 
-        <ImageView
-            android:id="@+id/register3_temperture_fill"
+        <TextView
+            android:id="@+id/register5_bartext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
-            android:layout_marginBottom="-10dp"
-            android:src="@drawable/temperture_bar_green"
-            android:visibility="invisible" />
-
-        <TextView
-            android:id="@+id/register3_temperture_bartext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:fontFamily="@font/pretendardmedium"
             android:gravity="center"
-            android:text="체온 측정 전"
+            android:text="003번"
             android:textColor="@color/black"
-            android:textSize="45sp"
-            android:textStyle="bold"
-            android:layout_centerInParent="true" /> <!-- 이미지의 중앙에 위치시키기 위해 추가한 코드입니다 -->
+            android:textSize="60sp"
+            android:textStyle="bold" /> <!-- 이미지의 중앙에 위치시키기 위해 추가한 코드입니다 -->
 
     </RelativeLayout>
 
         <LinearLayout
-            android:layout_marginTop="50dp"
-            android:id="@+id/register3_print_temperture_layout"
-            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:id="@+id/register5_print_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/register3_temperture_bar_layout">
+            app:layout_constraintTop_toBottomOf="@id/register5_bar_layout">
 
         <TextView
-            android:id="@+id/register3_print_temperture_text"
+            android:id="@+id/register3_print_text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pretendardmedium"
-            android:gravity="center"
-            android:text="화면에서 거리를 두면\n체온 측정이 시작됩니다"
+            android:text="접수일: 2023-12-15 17:00"
             android:textColor="#6A6A6A"
-            android:textSize="35sp" />
+            android:textSize="30sp" />
+            <TextView
+                android:id="@+id/register3_print_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendardmedium"
+                android:text="담당의: 이한웅"
+                android:textColor="#6A6A6A"
+                android:textSize="30sp" />
 
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register3_print_temperture_layout">
+        app:layout_constraintTop_toBottomOf="@id/register5_print_layout">
 
-        <ImageView
-
-            android:id="@+id/register3_prev_btn"
-            android:layout_width="80dp"
-            android:layout_height="100dp"
-            android:src="@drawable/register1_prev_btn"/>
         <ImageView
             android:id="@+id/register3_next_text"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="0.65"
+            android:scaleY="0.65"
 
-            android:src="@drawable/next_text"/>
-
-        <ImageView
-            android:id="@+id/register3_next_btn"
-            android:layout_width="80dp"
-            android:layout_height="100dp"
-
-            android:src="@drawable/next_btn"/>
+            android:src="@drawable/main_text"/>
 
     </LinearLayout>
 

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".patient.PatientMainActivity"
+    tools:ignore="MissingClass">
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/register4_step_layout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/register4_step"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/register4_button"
+        android:layout_width="1200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/register4_step_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/register4_button1_layout"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="-15dp">
+
+            <ImageView
+                android:id="@+id/visible_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/register4_button1"/>
+
+            <ImageView
+                android:id="@+id/invisible_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/register4_button1_clicked"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/register4_button2_layout"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-15dp"
+            android:layout_marginEnd="-15dp">
+
+            <ImageView
+                android:id="@+id/register4_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/register4_button2"/>
+
+            <ImageView
+                android:id="@+id/register4_button2_clicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/register4_button2_clicked"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/register4_button3_layout"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-15dp">
+
+            <ImageView
+                android:id="@+id/register4_button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/register4_button3"/>
+
+            <ImageView
+                android:id="@+id/register4_button3_clicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/register4_button3_clicked"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="38dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register4_button">
+
+        <ImageView
+
+            android:id="@+id/register3_prev_btn"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@drawable/register1_prev_btn"/>
+        <ImageView
+            android:id="@+id/register3_next_text"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+
+            android:src="@drawable/next_text"/>
+
+        <ImageView
+            android:id="@+id/register3_next_btn"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+
+            android:src="@drawable/next_btn"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

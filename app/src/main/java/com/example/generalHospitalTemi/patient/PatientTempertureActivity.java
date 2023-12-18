@@ -34,6 +34,7 @@ public class PatientTempertureActivity extends AppCompatActivity {
         Handler handler = new Handler();
         Animation bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.ani_bounce);
         databaseReference.child("rfid").addValueEventListener(new ValueEventListener() {
+            //체온 측정
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Object rfidValue = snapshot.getValue();

@@ -14,18 +14,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp">
-
-      <ImageView
-          android:layout_width="650dp"
-          android:layout_height="wrap_content"
-          android:src="@drawable/register_step1"
-          />
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_width="650dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/register_step1"
+            />
 
     </LinearLayout>
-
     <LinearLayout
-        android:id="@+id/register1_card_tag_layout"
+        android:id="@+id/register1_card_tag_layout_verify"
         android:gravity="center"
         android:layout_width="850dp"
         android:layout_height="500dp"
@@ -36,39 +35,21 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:id="@+id/register1_card_tag"
+            android:id="@+id/register1_card_tag_verify"
             android:layout_width="425dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="30dp"
-            android:src="@drawable/register_card_left"/>
+            android:src="@drawable/register_card_left_yes"/>
 
-        <LinearLayout
-            android:id="@+id/register1_card_tag_text_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/register1_step_layout">
         <ImageView
-            android:id="@+id/register1_card_tag_text"
+            android:id="@+id/register1_card_tag_text_verify"
             android:layout_width= "350dp"
             android:layout_height="match_parent"
-            android:src="@drawable/register_card_right"/>
+            android:src="@drawable/register_card_right_yes"/>
 
-            <TextView
-                android:id="@+id/register3_print_temperture_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendardmedium"
-                android:gravity="left"
-                android:text="RFID 카드 인식 전 입니다."
-                android:textColor="#6A6A6A"
-                android:textSize="20sp" />
-
-        </LinearLayout>
 
     </LinearLayout>
+
 
     <LinearLayout
         android:gravity="center"
