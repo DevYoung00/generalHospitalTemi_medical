@@ -57,7 +57,7 @@
             android:src="@drawable/register_card_right"/>
 
             <TextView
-                android:id="@+id/register3_print_temperture_text"
+                android:id="@+id/register1_card_tag_subtext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendardmedium"
