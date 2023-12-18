@@ -64,7 +64,7 @@
                 android:id="@+id/request2_button1_clicked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/register4_button1_clicked"
+                android:src="@drawable/request2_1_clicked"
                 android:visibility="invisible"/>
         </RelativeLayout>
 
@@ -86,7 +86,7 @@
                 android:id="@+id/request2_button2_clicked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/register4_button2_clicked"
+                android:src="@drawable/request2_2_clicked"
                 android:visibility="invisible" />
         </RelativeLayout>
 
@@ -107,7 +107,7 @@
                 android:id="@+id/request2_button3_clicked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/register4_button3_clicked"
+                android:src="@drawable/request2_3_clicked"
                 android:visibility="invisible"/>
         </RelativeLayout>
     </LinearLayout>
