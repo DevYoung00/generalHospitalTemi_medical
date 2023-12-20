@@ -45,13 +45,13 @@
             android:layout_marginEnd="-15dp">
 
             <ImageView
-                android:id="@+id/visible_img"
+                android:id="@+id/register4_button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/register4_button1"/>
 
             <ImageView
-                android:id="@+id/invisible_img"
+                android:id="@+id/register4_button1_clicked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/register4_button1_clicked"
@@ -114,24 +114,19 @@
         app:layout_constraintTop_toBottomOf="@id/register4_button">
 
         <ImageView
-
-            android:id="@+id/register3_prev_btn"
-            android:layout_width="80dp"
-            android:layout_height="100dp"
-            android:src="@drawable/register1_prev_btn"/>
-        <ImageView
-            android:id="@+id/register3_next_text"
+            android:id="@+id/register4_main_text"
             android:layout_width="200dp"
             android:layout_height="100dp"
 
-            android:src="@drawable/next_text"/>
+            android:src="@drawable/main_text"/>
 
         <ImageView
-            android:id="@+id/register3_next_btn"
-            android:layout_width="80dp"
+            android:id="@+id/register4_next_btn"
+            android:layout_width="200dp"
             android:layout_height="100dp"
 
             android:src="@drawable/next_btn"/>
+
 
     </LinearLayout>
 
