@@ -47,6 +47,8 @@ public class EmergencyActivity extends AppCompatActivity implements
         roboTemiListeners.getRobot().addTtsListener(this);
         roboTemiListeners.getRobot().addWakeupWordListener(this);
         roboTemiListeners.getRobot().addConversationViewAttachesListenerListener(this);
+        roboTemiListeners.getRobot().toggleNavigationBillboard(false);
+        
 
         codeblue=0;
         binding.emergencySendPic.setOnClickListener(new View.OnClickListener() {
@@ -58,8 +60,9 @@ public class EmergencyActivity extends AppCompatActivity implements
                     binding.emergencyText.setText("다른 Temi에게 응급 상황 종료 알림을 전송하려면 아래 버튼을 누르세요");
                     databaseReference.child("codeblue").setValue(true);
                     codeblue=1;
-                   // mediaPlayer.start();
+                   mediaPlayer.start();
                     roboTemiListeners.goTo("codeblue");
+
 
                 }
                 else if(codeblue == 1){
@@ -67,7 +70,7 @@ public class EmergencyActivity extends AppCompatActivity implements
                     binding.emergencyText.setText("다른 Temi에게 응급 알림을 전송하려면 아래 버튼을 누르세요");
                     databaseReference.child("codeblue").setValue(false);
                     codeblue=0;
-                   // mediaPlayer.release();
+                   mediaPlayer.release();
                     roboTemiListeners.goTo("home base");
                 }
 //                Intent intent = new Intent(PatientMainActivity.this, PatientTempertureActivity.class);

@@ -44,7 +44,7 @@ public class DoctorCalledActivity extends AppCompatActivity {
         // 애니메이션 시작
         rotateAnimator.start();
 
-        databaseReference.child("calling").addValueEventListener(new ValueEventListener() {
+        databaseReference.child("callingType").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 // callingType 변수를 읽어옵니다.
