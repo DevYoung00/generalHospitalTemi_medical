@@ -15,7 +15,6 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.example.generalHospitalTemi.databinding.ActivityMainBinding;
-import com.example.generalHospitalTemi.medical.CallReqActivity;
 import com.example.generalHospitalTemi.medical.MedicalMainActivity;
 import com.example.generalHospitalTemi.medical.emergency.CodeBlueActivity;
 import com.example.generalHospitalTemi.medical.emergency.EmergencyActivity;
@@ -74,7 +73,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                if(snapshot.getValue().toString().equals("true") && type.equals("patient")){
+                if (snapshot.getValue().toString() == "true" && type.equals("patient")) {
+                    Intent intent = new Intent(MainActivity.this, CodeBlueActivity.class);
+                    startActivity(intent);
+                } else {
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.w("tag", "Failed to read RFID value.", error.toException());
+            }
+        });
+
+        databaseReference.child("calling").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.getValue().toString() == "true" && type.equals("patient")){
                     Intent intent = new Intent(MainActivity.this, CodeBlueActivity.class);
                     startActivity(intent);
                 }
@@ -83,29 +99,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Log.w("tag", "Failed to read RFID value.", error.toException());
-            }
-        });
-        databaseReference.child("call").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(!snapshot.getValue().toString().isEmpty()){
-                    if(snapshot.getValue().toString().equals("true") && type.equals("medical")){
-                        Intent intent = new Intent(MainActivity.this, CallReqActivity.class);
-                        startActivity(intent);
-                    }
-                    else{
-
-                    }
-                }
-
-
-
-            }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Log.w("tag", "Failed to read RFID value.", error.toException());

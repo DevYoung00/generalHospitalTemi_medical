@@ -69,7 +69,7 @@ public class RegisterActivity3 extends AppCompatActivity {
                                 startActivity(intent);
                                 finish(); // 현재 액티비티 종료
                             }
-                        }, 2000); // 3000ms = 3초
+                        }, 4000); // 3000ms = 3초
 
                     } else {
                         binding.tempertureBartext.setText("체온 측정 전");
