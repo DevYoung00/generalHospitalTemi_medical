@@ -15,6 +15,7 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.example.generalHospitalTemi.databinding.ActivityMainBinding;
+import com.example.generalHospitalTemi.medical.DoctorCalledActivity;
 import com.example.generalHospitalTemi.medical.MedicalMainActivity;
 import com.example.generalHospitalTemi.medical.emergency.CodeBlueActivity;
 import com.example.generalHospitalTemi.medical.emergency.EmergencyActivity;
@@ -90,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
         databaseReference.child("calling").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.getValue().toString() == "true" && type.equals("patient")){
-                    Intent intent = new Intent(MainActivity.this, CodeBlueActivity.class);
+                if(snapshot.getValue().toString() == "true" && type.equals("medical")){
+                    Intent intent = new Intent(MainActivity.this, DoctorCalledActivity.class);
                     startActivity(intent);
                 }
                 else{

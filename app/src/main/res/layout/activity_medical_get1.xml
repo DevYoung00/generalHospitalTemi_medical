@@ -92,12 +92,6 @@
         app:layout_constraintBottom_toBottomOf="parent" >
 
         <ImageView
-
-            android:id="@+id/get1_prev_btn"
-            android:layout_width="80dp"
-            android:layout_height="100dp"
-            android:src="@drawable/register1_prev_btn"/>
-        <ImageView
             android:id="@+id/get1_prev_text"
             android:layout_width="200dp"
             android:layout_height="100dp"

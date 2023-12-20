@@ -1,7 +1,9 @@
 package com.example.generalHospitalTemi.medical;
 
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
@@ -9,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.generalHospitalTemi.databinding.ActivityMedicalDoctorcomeBinding;
+import com.example.generalHospitalTemi.patient.PatientMainActivity;
+import com.example.generalHospitalTemi.patient.call.DoctorCallActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DataSnapshot;
@@ -73,7 +77,13 @@ public class DoctorCalledActivity extends AppCompatActivity {
                 // 에러 처리
             }
         });
-
+        binding.mainText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DoctorCalledActivity.this, MedicalMainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // 멈추기
        // rotateAnimator.cancel();

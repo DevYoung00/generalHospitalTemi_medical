@@ -14,6 +14,21 @@
         android:theme="@style/Theme.TestApp"
         tools:targetApi="31">
         <activity
+            android:name=".medical.get.GetActivity1"
+            android:exported="true" />
+        <activity
+            android:name=".medical.get.GetActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".medical.get.GetActivity3"
+            android:exported="true" />
+        <activity
+            android:name=".medical.get.GetNoActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".medical.get.GetYesActivity2"
+            android:exported="true" />
+        <activity
             android:name=".medical.request.RequestActivity3"
             android:exported="true" />
         <activity

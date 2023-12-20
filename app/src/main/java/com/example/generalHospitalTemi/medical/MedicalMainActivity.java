@@ -10,6 +10,7 @@ import com.example.generalHospitalTemi.R;
 import com.example.generalHospitalTemi.databinding.ActivityMainBinding;
 import com.example.generalHospitalTemi.databinding.ActivityMedicalMainBinding;
 import com.example.generalHospitalTemi.medical.emergency.EmergencyActivity;
+import com.example.generalHospitalTemi.medical.get.GetActivity1;
 import com.example.generalHospitalTemi.medical.request.RequestActivity1;
 import com.example.generalHospitalTemi.patient.PatientMainActivity;
 import com.example.generalHospitalTemi.patient.PatientTempertureActivity;
@@ -38,5 +39,16 @@ public class MedicalMainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        binding.suppliesRecImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MedicalMainActivity.this, GetActivity1.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
