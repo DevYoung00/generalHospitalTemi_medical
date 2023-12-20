@@ -63,10 +63,10 @@
 
 
         <ImageView
-            android:id="@+id/register1_prev_text"
+            android:id="@+id/register1_go_to_main"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:src="@drawable/register1_prev"/>
+            android:src="@drawable/go_to_main"/>
 
 
 

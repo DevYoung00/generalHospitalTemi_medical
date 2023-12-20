@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import com.example.generalHospitalTemi.R;
 import com.example.generalHospitalTemi.databinding.ActivityPatientDoctorcallBinding;
+import com.example.generalHospitalTemi.medical.MedicalMainActivity;
+import com.example.generalHospitalTemi.medical.emergency.EmergencyActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -67,5 +69,14 @@ public class DoctorCallActivity extends AppCompatActivity {
 
             }
         });
+
+        binding.callGoToMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DoctorCallActivity.this, MedicalMainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
