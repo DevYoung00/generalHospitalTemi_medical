@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 
@@ -56,11 +57,23 @@ public class RegisterActivity1 extends AppCompatActivity {
                     Object cardnum_before = lastNode.getValue();
                     String cardnum = cardnum_before.toString();
                     Log.d("Cardnum Log", "Cardnum: " + cardnum);
-                    if ("99101208166".equals(cardnum)) {
-                        startActivity(new Intent(RegisterActivity1.this, RegisterYesActivity.class));
-                    } else {
-                        startActivity(new Intent(RegisterActivity1.this, RegisterNoActivity.class));
-                    }
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            if ("99101208166".equals(cardnum)) {
+                                startActivity(new Intent(RegisterActivity1.this, RegisterYesActivity.class));
+                                finish();
+                            }
+                            else if("None".equals(cardnum)) {
+
+                            }
+                            else{
+                                startActivity(new Intent(RegisterActivity1.this, RegisterNoActivity.class));
+                                finish();
+                            }
+                        }
+                    }, 2000);
                 }
             }
 

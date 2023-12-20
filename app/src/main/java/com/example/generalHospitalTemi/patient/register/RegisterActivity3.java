@@ -1,19 +1,19 @@
-package com.example.generalHospitalTemi.patient;
+package com.example.generalHospitalTemi.patient.register;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
-import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.generalHospitalTemi.MainActivity;
 import com.example.generalHospitalTemi.R;
-import com.example.generalHospitalTemi.databinding.ActivityPatientTempertureBinding;
+import com.example.generalHospitalTemi.databinding.ActivityPatientRegister3Binding;
+import com.example.generalHospitalTemi.patient.PatientMainActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,14 +21,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-public class PatientTempertureActivity extends AppCompatActivity {
+public class RegisterActivity3 extends AppCompatActivity {
 
-    private ActivityPatientTempertureBinding binding;
+    private ActivityPatientRegister3Binding binding;
     private DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityPatientTempertureBinding.inflate(getLayoutInflater());
+        binding = ActivityPatientRegister3Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         databaseReference = FirebaseDatabase.getInstance().getReference();
         Handler handler = new Handler();
@@ -61,10 +61,19 @@ public class PatientTempertureActivity extends AppCompatActivity {
                                 }
                             }
                         }, 1500);
+                        // 3초 후에 PatientMainActivity로 이동
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Intent intent = new Intent(RegisterActivity3.this, RegisterActivity4.class);
+                                startActivity(intent);
+                                finish(); // 현재 액티비티 종료
+                            }
+                        }, 3000); // 3000ms = 3초
+
                     } else {
                         binding.tempertureBartext.setText("체온 측정 전");
                     }
-
                 }
             }
 
@@ -74,10 +83,10 @@ public class PatientTempertureActivity extends AppCompatActivity {
             }
         });
 
-        binding.temperturePrevText.setOnClickListener(new View.OnClickListener() {
+        binding.register3MainText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PatientTempertureActivity.this, PatientMainActivity.class);
+                Intent intent = new Intent(RegisterActivity3.this, PatientMainActivity.class);
                 startActivity(intent);
             }
         });

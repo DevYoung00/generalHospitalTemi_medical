@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.example.generalHospitalTemi.patient.PatientMainActivity;
-import com.example.generalHospitalTemi.patient.register.RegisterActivity2;
 import com.example.generalHospitalTemi.databinding.ActivityPatientRegister1VerifyNoBinding;
 
 public class RegisterNoActivity extends AppCompatActivity {
@@ -38,6 +37,6 @@ public class RegisterNoActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish(); // 현재 액티비티 종료
             }
-        }, 1500); // 3000ms = 3초
+        }, 3000); // 3000ms = 3초
     }
 }
