@@ -48,18 +48,20 @@ public class RegisterActivity1 extends AppCompatActivity {
     }
 
     private void checkCardnum() {
-        databaseReference.child("cardnum").orderByKey().limitToLast(1).addValueEventListener(new ValueEventListener() {
+        databaseReference.orderByKey().limitToLast(1).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                DataSnapshot lastNode = snapshot.getChildren().iterator().next();
-                Object cardnum_before = lastNode.getValue();
-                String cardnum = cardnum_before.toString();
-                Log.d("Cardnum Log", "Cardnum: " + cardnum);
+                if (snapshot.exists()) {
+                    DataSnapshot lastNode = snapshot.getChildren().iterator().next();
+                    Object cardnum_before = lastNode.getValue();
+                    String cardnum = cardnum_before.toString();
+                    Log.d("Cardnum Log", "Cardnum: " + cardnum);
                     if ("99101208166".equals(cardnum)) {
                         startActivity(new Intent(RegisterActivity1.this, RegisterYesActivity.class));
                     } else {
                         startActivity(new Intent(RegisterActivity1.this, RegisterNoActivity.class));
                     }
+                }
             }
 
             @Override
