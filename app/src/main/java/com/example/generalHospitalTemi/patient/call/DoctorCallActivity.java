@@ -24,7 +24,7 @@ public class DoctorCallActivity extends AppCompatActivity {
     private Spinner spinner;
     private CustomSpinnerAdapter adapter;
     private String selectedItem;
-    private int selectedPosition;
+    public int selectedPosition;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +60,7 @@ public class DoctorCallActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(selectedPosition!= 0){
                 Intent intent = new Intent(DoctorCallActivity.this, DoctorComeActivity.class);
+                intent.putExtra("callingType", selectedPosition);
                 startActivity(intent);
                 }
                 else {

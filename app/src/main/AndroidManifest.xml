@@ -29,6 +29,9 @@
             android:name=".medical.emergency.EmergencyActivity"
             android:exported="true" />
         <activity
+            android:name=".medical.DoctorCalledActivity"
+            android:exported="true" />
+        <activity
             android:name=".patient.call.DoctorComeActivity"
             android:exported="true" />
         <activity

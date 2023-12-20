@@ -73,6 +73,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                if (snapshot.getValue().toString() == "true" && type.equals("patient")) {
+                    Intent intent = new Intent(MainActivity.this, CodeBlueActivity.class);
+                    startActivity(intent);
+                } else {
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.w("tag", "Failed to read RFID value.", error.toException());
+            }
+        });
+
+        databaseReference.child("calling").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.getValue().toString() == "true" && type.equals("patient")){
                     Intent intent = new Intent(MainActivity.this, CodeBlueActivity.class);
                     startActivity(intent);
@@ -82,13 +99,11 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Log.w("tag", "Failed to read RFID value.", error.toException());
             }
         });
-
 
     }
 }

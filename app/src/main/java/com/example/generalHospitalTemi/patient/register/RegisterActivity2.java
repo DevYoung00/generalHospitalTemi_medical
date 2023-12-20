@@ -29,7 +29,7 @@ import com.example.generalHospitalTemi.patient.PatientMainActivity;
             super.onCreate(savedInstanceState);
             binding = ActivityPatientRegister2Binding.inflate(getLayoutInflater());
             setContentView(binding.getRoot());
-
+            binding.register2PrintIdText.setTextSize(18);
             binding.rootLayout.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
