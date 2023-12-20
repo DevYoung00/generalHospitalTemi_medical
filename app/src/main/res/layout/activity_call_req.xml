@@ -4,56 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".patient.call.DoctorComeActivity">
+    tools:context=".medical.CallReqActivity">
     <LinearLayout
         android:gravity="center"
-        android:id="@+id/medical_request3_layout"
+        android:id="@+id/doctor_call_layout"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         >
-
         <TextView
-            android:id="@+id/request3_move"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pretendardsemibold"
-            android:text="물품 이동중"
-            android:textColor="@color/black"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textColor="@color/black"
+            android:text="의료진 호출 요청"/>
 
         <TextView
-            android:id="@+id/request3_place_type"
+            android:id="@+id/call_reason"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pretendardsemibold"
-            android:text="현재 물품 수령을 위해 1번 서랍으로 이동합니다."
-            android:textColor="#6A6A6A"
+            android:text="사유: 응급 환자 발생"
             android:textSize="30sp" />
 
 
     </LinearLayout>
     <LinearLayout
         android:layout_marginTop="150dp"
-        android:id="@+id/medical_request3_temi_layout"
+        android:id="@+id/register1_card_tag_layout"
         android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/medical_request3_layout">
+        app:layout_constraintTop_toBottomOf="@id/doctor_call_layout">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/request3_loading_pic"
+            android:id="@+id/call_loading_pic"
             android:src="@drawable/loading_pic"/>
-
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendardmedium"
+            android:textSize="30sp"
+            android:text="환자용 Temi 위치로 이동해주세요"/>
 
     </LinearLayout>
 
@@ -68,11 +70,11 @@
         app:layout_constraintBottom_toBottomOf="parent" >
 
         <ImageView
-            android:id="@+id/medical_request3_wait"
-            android:layout_width="wrap_content"
+            android:id="@+id/register1_prev_text"
+            android:layout_width="200dp"
             android:layout_height="100dp"
-            android:src="@drawable/request3_wait"/>
 
+            android:src="@drawable/wait"/>
 
     </LinearLayout>
 

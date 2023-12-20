@@ -74,6 +74,7 @@ public class DoctorCallActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DoctorCallActivity.this, MedicalMainActivity.class);
+                intent.putExtra("reason",selectedPosition);
                 startActivity(intent);
             }
         });
