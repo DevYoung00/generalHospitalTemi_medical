@@ -35,6 +35,12 @@
             android:name=".patient.register.RegisterActivity1"
             android:exported="true" />
         <activity
+            android:name=".patient.register.RegisterNoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".patient.register.RegisterYesActivity"
+            android:exported="true" />
+        <activity
             android:name=".medical.RfidSuppliesActivity"
             android:exported="true" />
         <activity

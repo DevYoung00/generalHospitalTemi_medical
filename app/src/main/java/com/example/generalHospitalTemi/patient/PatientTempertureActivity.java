@@ -33,15 +33,16 @@ public class PatientTempertureActivity extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference();
         Handler handler = new Handler();
         Animation bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.ani_bounce);
-        databaseReference.child("rfid").addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Temperature").orderByKey().limitToLast(1).addValueEventListener(new ValueEventListener() {
             //체온 측정
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Object rfidValue = snapshot.getValue();
+                DataSnapshot lastNode = snapshot.getChildren().iterator().next();
+                Object temperatureValue = lastNode.getValue();
                 binding.tempertureFillRed.setVisibility(View.INVISIBLE);
                 binding.tempertureFillGreen.setVisibility(View.INVISIBLE);
-                if (rfidValue != null) {
-                    double temperture = Double.valueOf(rfidValue.toString());
+                if (temperatureValue != null) {
+                    double temperture = Double.valueOf(temperatureValue.toString());
                     if (temperture != 0){
                         binding.tempertureBartext.setText("체온 측정 중...");
                         handler.postDelayed(new Runnable() {
@@ -56,7 +57,7 @@ public class PatientTempertureActivity extends AppCompatActivity {
                                 } else {
                                     binding.tempertureFillGreen.setVisibility(View.INVISIBLE);
                                     binding.tempertureFillRed.setVisibility(View.VISIBLE);
-                                    binding.printTempertureText.setText("체온이 비정상입니다.\n의료진을 호출합니다.");
+                                    binding.printTempertureText.setText("체온이 비정상입니다.\n가까운 의료진을 찾아가세요.");
                                 }
                             }
                         }, 1500);
