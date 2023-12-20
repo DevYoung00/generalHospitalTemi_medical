@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private DatabaseReference databaseReference;
 
+    private String type;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +40,12 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         databaseReference = FirebaseDatabase.getInstance().getReference();
-
+        type = "";
         // go to medical main
         binding.medicalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                type = "medical";
                 Intent intent = new Intent(MainActivity.this, MedicalMainActivity.class);
                 startActivity(intent);
             }
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         binding.patientButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                type = "patient";
                 Intent intent = new Intent(MainActivity.this, PatientMainActivity.class);
                 startActivity(intent);
             }
@@ -69,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                if(snapshot.getValue().toString() == "true"){
+                if(snapshot.getValue().toString() == "true" && type.equals("patient")){
                     Intent intent = new Intent(MainActivity.this, CodeBlueActivity.class);
                     startActivity(intent);
                 }

@@ -38,6 +38,7 @@ public class EmergencyActivity extends AppCompatActivity {
                 else if(codeblue == 1){
                     binding.emergencySendPic.setImageResource(R.drawable.emergency_btn);
                     binding.emergencyText.setText("다른 Temi에게 응급 알림을 전송하려면 아래 버튼을 누르세요");
+                    databaseReference.child("codeblue").setValue(false);
                 }
 //                Intent intent = new Intent(PatientMainActivity.this, PatientTempertureActivity.class);
 //                startActivity(intent);
