@@ -41,6 +41,9 @@
             android:name=".patient.register.RegisterNo2Activity"
             android:exported="true" />
         <activity
+            android:name=".patient.register.RegisterActivity5"
+            android:exported="true" />
+        <activity
             android:name=".patient.register.RegisterActivity4"
             android:exported="true" />
         <activity

@@ -53,14 +53,14 @@ public class RegisterActivity3 extends AppCompatActivity {
                                 if (temperture <= 37.5) {
                                     binding.tempertureFillRed.setVisibility(View.INVISIBLE);
                                     binding.tempertureFillGreen.setVisibility(View.VISIBLE);
-                                    binding.printTempertureText.setText("체온이 정상입니다.");
+                                    binding.printTempertureText.setText("체온이 정상입니다.\n 잠시 후, 진료과 선택을 해주세요.");
                                 } else {
                                     binding.tempertureFillGreen.setVisibility(View.INVISIBLE);
                                     binding.tempertureFillRed.setVisibility(View.VISIBLE);
-                                    binding.printTempertureText.setText("체온이 비정상입니다.\n가까운 의료진을 찾아가세요.");
+                                    binding.printTempertureText.setText("체온이 비정상입니다.\n접수 후, 가까운 의료진을 찾아가세요.");
                                 }
                             }
-                        }, 1500);
+                        }, 2000);
                         // 3초 후에 PatientMainActivity로 이동
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -69,7 +69,7 @@ public class RegisterActivity3 extends AppCompatActivity {
                                 startActivity(intent);
                                 finish(); // 현재 액티비티 종료
                             }
-                        }, 3000); // 3000ms = 3초
+                        }, 2000); // 3000ms = 3초
 
                     } else {
                         binding.tempertureBartext.setText("체온 측정 전");

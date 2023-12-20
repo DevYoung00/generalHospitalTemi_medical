@@ -114,7 +114,7 @@
         app:layout_constraintTop_toBottomOf="@id/register5_print_layout">
 
         <ImageView
-            android:id="@+id/register3_next_text"
+            android:id="@+id/register5_main_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleX="0.65"

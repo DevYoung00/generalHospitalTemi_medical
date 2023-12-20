@@ -120,6 +120,13 @@
 
             android:src="@drawable/main_text"/>
 
+        <ImageView
+            android:id="@+id/register4_next_btn"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+
+            android:src="@drawable/next_btn"/>
+
 
     </LinearLayout>
 
