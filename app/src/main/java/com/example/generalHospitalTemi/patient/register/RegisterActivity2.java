@@ -1,4 +1,4 @@
-package com.example.generalHospitalTemi.patient.register;
+/* package com.example.generalHospitalTemi.patient.register;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -69,3 +69,4 @@ public class RegisterActivity2 extends AppCompatActivity {
         });
     }
 }
+*/
