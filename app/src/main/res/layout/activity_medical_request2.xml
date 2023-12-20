@@ -130,11 +130,12 @@
             android:layout_height="100dp"
             android:src="@drawable/register1_prev_btn"/>
         <ImageView
-            android:id="@+id/request2_next_text"
+            android:id="@+id/request2_main"
             android:layout_width="200dp"
             android:layout_height="100dp"
 
-            android:src="@drawable/next_text"/>
+            android:src="@drawable/go_to_main"/>
+
 
         <ImageView
             android:id="@+id/request2_next_btn"
