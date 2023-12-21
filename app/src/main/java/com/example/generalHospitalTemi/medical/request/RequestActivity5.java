@@ -61,6 +61,12 @@ public class RequestActivity5 extends AppCompatActivity  implements
         if(placeType==1){
             roboTemiListeners.getRobot().goToPosition(currentPosition);
         }
+        else if(placeType==2){
+            roboTemiListeners.getRobot().goTo("room1");
+        }
+        else if(placeType==3){
+            roboTemiListeners.getRobot().goTo("room2");
+        }
     }
 
 
