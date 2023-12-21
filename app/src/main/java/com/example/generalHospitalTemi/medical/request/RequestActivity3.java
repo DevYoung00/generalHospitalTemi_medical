@@ -74,9 +74,8 @@ public class RequestActivity3 extends AppCompatActivity  implements
 
         //roboTemiListeners = new RoboTemiListeners();
 
-        roboTemiListeners.goTo(String.valueOf(productType));
-
-
+//        roboTemiListeners.goTo(String.valueOf(productType));
+        roboTemiListeners.goTo("home base");
 
     }
 
