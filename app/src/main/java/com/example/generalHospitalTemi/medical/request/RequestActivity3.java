@@ -10,11 +10,13 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.generalHospitalTemi.R;
 import com.example.generalHospitalTemi.databinding.ActivityMedicalRequest2Binding;
 import com.example.generalHospitalTemi.databinding.ActivityMedicalRequest3TemiBinding;
 import com.example.generalHospitalTemi.medical.MedicalMainActivity;
+import com.example.generalHospitalTemi.patient.call.DoctorCallActivity;
 import com.example.generalHospitalTemi.temi.RoboTemiListeners;
 import com.robotemi.sdk.Robot;
 import com.robotemi.sdk.TtsRequest;
@@ -50,6 +52,7 @@ public class RequestActivity3 extends AppCompatActivity implements
         roboTemiListeners.getRobot().addWakeupWordListener(this);
         roboTemiListeners.getRobot().addConversationViewAttachesListenerListener(this);
         roboTemiListeners.getRobot().toggleNavigationBillboard(false);
+        roboTemiListeners.getRobot().addOnGoToLocationStatusChangedListener(this);
         // Intent에서 데이터를 받아옴
         Intent intent = getIntent();
         if (intent != null) {
@@ -117,8 +120,8 @@ public class RequestActivity3 extends AppCompatActivity implements
 
     @Override
     public void onGoToLocationStatusChanged(@NonNull String s, @NonNull String s1, int i, @NonNull String s2) {
-        // Log.d("THIS IS ")
-        if(s1.equals("COMPLETE")){
+
+        if(s1.equals("complete")){
             Intent intent = new Intent(RequestActivity3.this, RequestActivity4.class);
             startActivity(intent);
         }
