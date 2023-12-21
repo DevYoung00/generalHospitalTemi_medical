@@ -55,7 +55,12 @@ public class GetActivity2 extends AppCompatActivity {
                 if ("99101208166".equals(cardNum)) {
                     startActivity(new Intent(GetActivity2.this, GetYesActivity2.class));
                     finish();
-                } else {
+                }
+                else if("None".equals(cardNum)) {
+
+                }
+
+                else {
                     startActivity(new Intent(GetActivity2.this, GetNoActivity2.class));
                     finish();
                 }
