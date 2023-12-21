@@ -6,16 +6,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
 import com.example.generalHospitalTemi.R;
 import com.example.generalHospitalTemi.databinding.ActivityMedicalRequest2Binding;
 import com.example.generalHospitalTemi.databinding.ActivityMedicalRequest3TemiBinding;
+import com.example.generalHospitalTemi.medical.MedicalMainActivity;
 import com.example.generalHospitalTemi.temi.RoboTemiListeners;
 import com.robotemi.sdk.Robot;
 import com.robotemi.sdk.TtsRequest;
 import com.robotemi.sdk.listeners.OnBeWithMeStatusChangedListener;
+import com.robotemi.sdk.listeners.OnGoToLocationStatusChangedListener;
 import com.robotemi.sdk.listeners.OnLocationsUpdatedListener;
 
 import java.util.List;
@@ -25,7 +29,7 @@ public class RequestActivity3 extends AppCompatActivity implements
         Robot.TtsListener,
         Robot.ConversationViewAttachesListener,
         Robot.WakeupWordListener,
-        OnLocationsUpdatedListener {
+        OnGoToLocationStatusChangedListener {
     private ActivityMedicalRequest3TemiBinding binding;
     int productType = 0;
     String placeType = "";
@@ -73,8 +77,22 @@ public class RequestActivity3 extends AppCompatActivity implements
         roboTemiListeners.getRobot().addWakeupWordListener(this);
         roboTemiListeners.getRobot().addConversationViewAttachesListenerListener(this);
 
+//        roboTemiListeners.goTo(placeType);
+//        intent = new Intent(RequestActivity3.this, MedicalMainActivity.class);
+//        startActivity(intent);
+
         roboTemiListeners.goTo(placeType);
-       // roboTemiListeners.onGoToLocationStatusChanged(placeType,);
+
+       // if(roboTemiListeners.getRobot().getLocations()
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                // 일정 시간 대기 후에 실행될 코드
+//                Intent intent = new Intent(RequestActivity3.this, RequestActivity4.class);
+//                startActivity(intent);
+//            }
+//        }, 20000); // 5초 대기
+//
     }
 
     @Override
@@ -98,7 +116,11 @@ public class RequestActivity3 extends AppCompatActivity implements
     }
 
     @Override
-    public void onLocationsUpdated(@NonNull List<String> list) {
-
+    public void onGoToLocationStatusChanged(@NonNull String s, @NonNull String s1, int i, @NonNull String s2) {
+        // Log.d("THIS IS ")
+        if(s1.equals("COMPLETE")){
+            Intent intent = new Intent(RequestActivity3.this, RequestActivity4.class);
+            startActivity(intent);
+        }
     }
 }

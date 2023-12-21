@@ -38,7 +38,7 @@ public class RoboTemiListeners extends RoboTemi // extends는 Main2Activity 예�
         OnLocationsUpdatedListener,
         OnConstraintBeWithStatusChangedListener,
         OnDetectionStateChangedListener,
-        Robot.AsrListener {
+        Robot.AsrListener{
 
     private Robot robot;
     public RoboTemiListeners() {
