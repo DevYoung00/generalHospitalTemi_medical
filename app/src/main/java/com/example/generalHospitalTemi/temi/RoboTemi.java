@@ -28,11 +28,11 @@ public class RoboTemi  {
     public void saveLocation(String location) {
         String loc = location.toLowerCase().trim();// 장소 관련 이름을 소문자로 만들고 앞뒤 띄어쓰기를 제거
         boolean result = robot.saveLocation(loc);// 장소를 저장
-        if (result) {// 결과 확인
-            speak(loc+" 장소 저장에 성공하였습니다." );
-        } else {
-            speak(loc +" 장소 저장에 실패하였습니다." );
-        }
+//        if (result) {// 결과 확인
+//            speak(loc+" 장소 저장에 성공하였습니다." );
+//        } else {
+//            speak(loc +" 장소 저장에 실패하였습니다." );
+//        }
     }
 
     public void goTo(String destination) {//저장된 장소로 이동하라

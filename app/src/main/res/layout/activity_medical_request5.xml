@@ -27,6 +27,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/request5_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pretendardsemibold"
@@ -49,7 +50,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/doctor_loading_pic"
+            android:id="@+id/loading_pic_req_5"
             android:src="@drawable/loading_pic"/>
 
 
