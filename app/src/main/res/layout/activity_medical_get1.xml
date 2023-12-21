@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pretendardsemibold"
-            android:text="현재 물품이 박스 안에 있습니다."
+            android:text="RFID인식을 통해 잠금장치가 해제됩니다."
             android:textColor="#11B636"
             android:textSize="30sp" />
 
