@@ -52,7 +52,7 @@ public class GetActivity2 extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if ("99101208166".equals(cardNum)) {
+                if ("15417441133".equals(cardNum)) {
                     startActivity(new Intent(GetActivity2.this, GetYesActivity2.class));
                     finish();
                 }

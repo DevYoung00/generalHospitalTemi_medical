@@ -76,7 +76,7 @@ public class DoctorComeActivity extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            if ("99101208166".equals(cardnum)) {
+                            if ("15417441133".equals(cardnum)) {
                                 databaseReference = FirebaseDatabase.getInstance().getReference();
                                 databaseReference.child("calling").setValue(false);
                                 startActivity(new Intent(DoctorComeActivity.this, PatientMainActivity.class));
