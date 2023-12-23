@@ -164,6 +164,9 @@ public class MainActivity extends AppCompatActivity implements
                             else if (remote.equals("4") && type.equals("medical")) {
                                 roboTemiListeners.goTo("home base");
                             }
+                            else if(remote.equals("5") && type.equals("medical")){
+                                skidJoy((float) -1.0,1);
+                            }
                         }
                     }, 500);
                 }
@@ -193,6 +196,14 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onWakeupWord(@NonNull String s, int i) {
 
+    }
+
+    public void skidJoy(float vel , int sec) {// 이동 예시
+        long t = System.currentTimeMillis();
+        long end = t + 1000*sec;
+        while (System.currentTimeMillis() < end) {
+            roboTemiListeners.skidJoy(vel, 0F);
+        }
     }
 }
 

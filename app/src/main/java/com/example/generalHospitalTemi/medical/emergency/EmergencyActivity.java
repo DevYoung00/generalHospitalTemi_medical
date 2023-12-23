@@ -48,7 +48,7 @@ public class EmergencyActivity extends AppCompatActivity implements
         roboTemiListeners.getRobot().addWakeupWordListener(this);
         roboTemiListeners.getRobot().addConversationViewAttachesListenerListener(this);
         roboTemiListeners.getRobot().toggleNavigationBillboard(false);
-        
+
 
         codeblue=0;
         binding.emergencySendPic.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +71,7 @@ public class EmergencyActivity extends AppCompatActivity implements
                     databaseReference.child("codeblue").setValue(false);
                     codeblue=0;
                    mediaPlayer.release();
-                    roboTemiListeners.goTo("home base");
+                    roboTemiListeners.goTo("room1");
                 }
 //                Intent intent = new Intent(PatientMainActivity.this, PatientTempertureActivity.class);
 //                startActivity(intent);

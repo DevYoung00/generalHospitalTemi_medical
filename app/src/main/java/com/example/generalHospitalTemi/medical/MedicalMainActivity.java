@@ -14,17 +14,18 @@ import com.example.generalHospitalTemi.medical.get.GetActivity1;
 import com.example.generalHospitalTemi.medical.request.RequestActivity1;
 import com.example.generalHospitalTemi.patient.PatientMainActivity;
 import com.example.generalHospitalTemi.patient.PatientTempertureActivity;
+import com.example.generalHospitalTemi.temi.RoboTemiListeners;
 
 public class MedicalMainActivity extends AppCompatActivity {
 
     private ActivityMedicalMainBinding binding;
+    RoboTemiListeners roboTemiListeners;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMedicalMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-
+        roboTemiListeners = new RoboTemiListeners();
         binding.codeblueImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,5 +51,13 @@ public class MedicalMainActivity extends AppCompatActivity {
         });
 
 
+    }
+    public void skidJoy(float vel , int sec) {// 이동 예시
+        //정면 방향으로 sec 초간 이동하라
+        long t = System.currentTimeMillis();
+        long end = t + 1000*sec;
+        while (System.currentTimeMillis() < end) {
+            roboTemiListeners.skidJoy(vel, 0F);
+        }
     }
 }

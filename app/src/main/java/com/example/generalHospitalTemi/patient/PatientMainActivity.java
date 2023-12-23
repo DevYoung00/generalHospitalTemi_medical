@@ -9,18 +9,24 @@ import android.view.View;
 import com.example.generalHospitalTemi.databinding.ActivityPatientMainBinding;
 import com.example.generalHospitalTemi.patient.call.DoctorCallActivity;
 import com.example.generalHospitalTemi.patient.register.RegisterActivity1;
+import com.example.generalHospitalTemi.temi.RoboTemiListeners;
+import com.robotemi.sdk.Robot;
 
 
 public class PatientMainActivity extends AppCompatActivity {
 
     private ActivityPatientMainBinding binding;
-
+    RoboTemiListeners roboTemiListeners;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityPatientMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        roboTemiListeners = new RoboTemiListeners();
+//        skidJoy((float) -1.0, 1);
+//        skidJoy((float) 1.0,1);
+//        skidJoy((float) 0.5,1);
+//        skidJoy((float) -0.5,1);
         // go to patient register
         binding.receptionImg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,5 +55,12 @@ public class PatientMainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public void skidJoy(float vel , int sec) {// 이동 예시
+        long t = System.currentTimeMillis();
+        long end = t + 1000*sec;
+        while (System.currentTimeMillis() < end) {
+            roboTemiListeners.skidJoy(vel, 0F);
+        }
     }
 }
